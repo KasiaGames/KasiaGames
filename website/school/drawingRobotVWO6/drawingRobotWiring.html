@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>kasia games</title>
+<link href ="../../baseStyle/base.css" rel="stylesheet">
+</head>
+<style>
+    body, html {
+  height: 100%;
+  margin: 0;
+}
+body {
+    background-size: cover;
+    background-color: #1e3139;
+    font-family: "Franklin Gothic Medium";
+}
+</style>
+    <nav>
+        <ul style="padding-left: 0px" style="margin-bottom: 0px">
+            <div class="backgroundBox">
+                
+                <!-- sidebarmenu -->
+                <div class="sideBar">
+                    <div class="iconBox">
+                        <div class="logo">
+                        </div>
+                        
+                        <a href="../../home/home.html">
+                        <div class="home">
+                        </div>
+                        </a>
+                        
+                        <a href="../../games/games.html">
+                        <div class="games">
+                        </div>
+                        </a>
+                            
+                        <a href="../../school/school.html">
+                        <div class="school">
+                        </div>
+                        </a>
+                            
+                        <a href="../../other/other.html">
+                        <div class="other">
+                        </div>
+                        </a>
+                        
+                        <div class="backNextBox">
+                            <a href="drawingRobotLego.html">
+                            <div class="backButton">
+                            </div>
+                            </a>
+                            <a href="drawingRobotCode.html">
+                            <div class="nextButton">
+                            </div>
+                            </a>
+                        </div>
+                    </div>  
+                </div>
+                
+                <!-- background -->
+                <div class="backgroundTopImage">
+                </div>
+                <div class="backgroundMidImage">
+                    <div class="containerBox">
+                        <div class="contentBox">
+                            <div class="contentBackgroundTopImage">
+                                <div class="titelBox">
+                                    <h1>
+                                        Whats this website.
+                                    </h1>
+                                </div>
+                            </div>
+                                <div class="contentBackgroundMidImage">
+                                    <div class="textBox">
+                                <!-- add text here -->
+                    
+                                <h1>
+                                    What parts did we use?
+                                </h1>
+                                <p>
+                                    We used an Arduino uno, 2 HC-SRO4 Ultrasone Sensors, L298N motor driver, 2 Lego power functions l motors and a servo.
+                                </p>
+                                <h2>
+                                    The sensors.
+                                </h2>
+                                <p>
+                                    To control the drawing robot we needed a distance sensor. Using this the robot can detect how far away a slider is from a object. We can use this to move the robot by subtracting the values of the sensor from the goal position. For example: the goal position is the vector (2, 3) and the position of the robot that it gets from the sensors is the vector (1, 5). By subtracting (1, 5) from (2, 3) we get (1, -2). (1, -2) is how much it then need to move and those values will decide the speed and direction of the motor. To detect the position of the drawing robot we use the HC-SRO4 Ultrasone Sensor. This sensor sends out sound waves, which can then bounce of a object and go back to the sensor. The sensor then picks up that sound and uses the time it took for the sound to get back to calculate the distance.
+                                </p>
+                                <h3>
+                                    The motors and the motor driver.
+                                </h3>
+                                <p>
+                                    We wanted to use Lego power functions l motors to move the robot because those motors can easily atach to the Lego part. The Lego motors 9V dc motors that have four wires. We only needed to use the two inside wires to control the motors(Lego uses the two outside wires as a way to connect a power suply to the circuit boards and an l motor doesnt have a circuit board). To control the motors we used an L298N motor driver. This driver can control one stepper motor or two dc motors. You can control motor 1 with input 1, input 2 and enable A. input 1 and input to control the direction of the motor and enable A controls the speed. Controlling motor 2 works in the same way but instead of using input 1, input 2 and enable A you use unput 3, input 4 and enable B. You can see the wiring of the motors in the image below.
+                                </p>
+                            </div>
+                                    <div class="imageBox">
+                                        <img src="images/wiringImages/motorWiring.jpg" style="width: 100%">
+                                    </div>
+                            </div>
+                            <div class="contentBackgroundBottomImage">
+                            </div>
+                            </div>
+                        <div class="waterContent">
+
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="backgroundBottomImage">
+                </div>
+        </ul>  
+    </nav>

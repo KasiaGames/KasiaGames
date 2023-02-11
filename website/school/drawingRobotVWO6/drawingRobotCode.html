@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>kasia games</title>
+<link href ="../../baseStyle/base.css" rel="stylesheet">
+</head>
+<style>
+    body, html {
+  height: 100%;
+  margin: 0;
+}
+body {
+    background-size: cover;
+    background-color: #1e3139;
+    font-family: "Franklin Gothic Medium";
+}
+</style>
+    <nav>
+        <ul style="padding-left: 0px" style="margin-bottom: 0px">
+            <div class="backgroundBox">
+                
+                <!-- sidebarmenu -->
+                <div class="sideBar">
+                    <div class="iconBox">
+                        <div class="logo">
+                        </div>
+                        
+                        <a href="../../home/home.html">
+                        <div class="home">
+                        </div>
+                        </a>
+                        
+                        <a href="../../games/games.html">
+                        <div class="games">
+                        </div>
+                        </a>
+                            
+                        <a href="../../school/school.html">
+                        <div class="school">
+                        </div>
+                        </a>
+                            
+                        <a href="../../other/other.html">
+                        <div class="other">
+                        </div>
+                        </a>
+                        
+                        <div class="backNextBox">
+                            <a href="drawingRobotWiring.html">
+                            <div class="backButton">
+                            </div>
+                            </a>
+                            <a href="drawingRobotMenu.html">
+                            <div class="nextButton">
+                            </div>
+                            </a>
+                        </div>
+                    </div>  
+                </div>
+                
+                <!-- background -->
+                <div class="backgroundTopImage">
+                </div>
+                <div class="backgroundMidImage">
+                    <div class="containerBox">
+                        <div class="contentBox">
+                            <div class="contentBackgroundTopImage">
+                                <div class="titelBox">
+                                    <h1>
+                                        Whats this website.
+                                    </h1>
+                                </div>
+                            </div>
+                                <div class="contentBackgroundMidImage">
+                                    <div class="textBox">
+                                <!-- add text here -->
+                    
+                                <h1>
+                                    The code.
+                                </h1>
+                                <p>
+                                    Here you can see the code we made to control the parts.
+                                </p>
+                                <h2>
+                                    The sensor.
+                                </h2>
+                                <p>
+                                    The sensor sends a pulse of sound every 12 microseconds and measures how long it takes to come back. And using the formula (duration X 0,0343)/2 you can get the distance in centimeters. You can see the code below.
+                                </p>
+                            </div>
+                                    <div class="imageBox">
+                                        <pre>
+const int trigPin = 12;
+const int echoPin = 8;
+                                            
+float duration;
+float distance;
+                                            
+void setup() {
+    Serial.begin(9600);
+    pinMode(trigPin, OUTPUT);
+    pinMode(echoPin, INPUT);
+}
+                                            
+void loop() {
+    digitalWrite(trigPin, LOW);
+    delayMicrosecond(2);
+                                            
+    digitalWrite(trigPin, HIGH);
+    delayMicrosecond(10);
+    digitalWrite(trigPin, Low);
+                                            
+    duration = pulseIn(echoPin, HIGH);
+    distance = (duration*0,0343)/2;
+    
+    Serial.print("Afstand: ");
+    Serial.println(distance);
+    
+    delay(100);
+}
+                                        </pre>
+                                    </div>
+                                    <div class="textBox">
+                                <!-- add text here -->
+                                <h1>
+                                    The motors.
+                                </h1>
+                                <p>
+                                    The motor stops for 10 seconds, spins in one direction for 10 seconds then spins in the other direction for 10 seconds and repears the loop. You can see the code below.
+                                </p>
+                            </div>
+                                    <div class="imageBox">
+                                        <pre>
+//Setup Motor Pins
+#define in1 2
+#define in2 4
+#define ENA 5
+
+void setup() {
+    Serial.begin(9600);
+    //set the pins for output
+    pinMode(in1, OUTPUT);
+    pinMode(in2, OUTPUT);
+    pinMode(ENA, OUTPUT);
+    
+    //set the pins to low - this wil keep the motor from moving.
+    digitalWrite(in1, LOW);
+    digitalWrite(in2, LOW);
+    digitalWrite(ENA, LOW);
+}
+
+void loop() {
+    //stop the motor
+    digitalWrite(ENA, LOW);
+    digitalWrite(in1, LOW);
+    digitalWrite(in2, LOW);
+    //waits 10 seconds
+    delay(10000);
+    
+    //spin the motor in one direction
+    digitalWrite(ENA, HIGH);
+    digitalWrite(in1, HIGH);
+    digitalWrite(in2, HIGH);
+    //waits 10 seconds
+    delay(10000);
+    
+    //spin motor in the other direction
+    digitalWrite(in1, LOW);
+    digitalWrite(in2, HIGH);
+    //waits 10 seconds
+    delay(10000);
+}
+                                        </pre>
+                                    </div>
+                            </div>
+                            <div class="contentBackgroundBottomImage">
+                            </div>
+                            </div>
+                        <div class="waterContent">
+
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="backgroundBottomImage">
+                </div>
+        </ul>  
+    </nav>

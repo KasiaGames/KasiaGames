@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>kasia games</title>
+<link href ="../../baseStyle/base.css" rel="stylesheet">
+</head>
+<style>
+    body, html {
+  height: 100%;
+  margin: 0;
+}
+body {
+    background-size: cover;
+    background-color: #1e3139;
+    font-family: "Franklin Gothic Medium";
+}
+</style>
+    <nav>
+        <ul style="padding-left: 0px" style="margin-bottom: 0px">
+            <div class="backgroundBox">
+                
+                <!-- sidebarmenu -->
+                <div class="sideBar">
+                    <div class="iconBox">
+                        <div class="logo">
+                        </div>
+                        
+                        <a href="../../home/home.html">
+                        <div class="home">
+                        </div>
+                        </a>
+                        
+                        <a href="../../games/games.html">
+                        <div class="games">
+                        </div>
+                        </a>
+                            
+                        <a href="../../school/school.html">
+                        <div class="school">
+                        </div>
+                        </a>
+                            
+                        <a href="../../other/other.html">
+                        <div class="other">
+                        </div>
+                        </a>
+                        
+                        <div class="backNextBox">
+                            <a href="soulbreakerIntro.html">
+                            <div class="backButton">
+                            </div>
+                            </a>
+                            <a href="soulbreakerEnemies.html">
+                            <div class="nextButton">
+                            </div>
+                            </a>
+                        </div>
+                    </div>  
+                </div>
+                
+                <!-- background -->
+                <div class="backgroundTopImage">
+                </div>
+                <div class="backgroundMidImage">
+                    <div class="containerBox">
+                        <div class="contentBox">
+                            <div class="contentBackgroundTopImage">
+                                <div class="titelBox">
+                                </div>
+                            </div>
+                                <div class="contentBackgroundMidImage">
+                                    <div class="textBox">
+                                <!-- add text here -->
+                    
+                                <h1>
+                                    Why did we choose for level generation?
+                                </h1>
+                                <p>
+                                    We chose for level generation because we wanted to have a lot of different levels.
+                                </p>
+                                <h2>
+                                    How does the level generation work?
+                                </h2>
+                                <p>
+                                    With this level generation the values get put in 3d array. I wil explain it using a grid. The generation starts in the center of the grid.
+                                </p>
+                                <div class="imageBox">
+                                        <img src="images/levelGenerationExplenationImages/levelGenGrid.png" style="width: 100%">
+                                </div>
+                                <p>
+                                    Then it chooses a random direction and moves one square. The square it came from gets 4 random values that decide how it wil look.
+                                </p>
+                                <div class="imageBox">
+                                        <img src="images/levelGenerationExplenationImages/levelGenGrid1.png" style="width: 100%">
+                                </div>
+                                <p>
+                                    This wil repeat multiple times. A integer decides how many times it wil repeat.
+                                </p>
+                                <div class="imageBox">
+                                        <img src="images/levelGenerationExplenationImages/levelGenGrid2.png" style="width: 100%">
+                                </div>
+                                <p>
+                                    It cant generate a room on the sqaures at the edge of the grid. when its next to one of those sqaures it cant move to those sqaures. This is to make sure there arent any index out of range errors.
+                                </p>
+                                <div class="imageBox">
+                                        <img src="images/levelGenerationExplenationImages/levelGenGrid3.png" style="width: 100%">
+                                </div>
+                                <p>
+                                    At the end the values of the first room get changed so its always the same.
+                                </p>
+                                <div class="imageBox">
+                                        <img src="images/levelGenerationExplenationImages/levelGenGrid4.png" style="width: 100%">
+                                </div> 
+                                <p>
+                                    Then the interior of the rooms get generated. For the generation of the rooms 4 2d arays are used on for each of the 4 values that a room has. There is an aray for walls and floors, an array for floor traps, an array for wall traps and an array for enemies. The arrays use different values to decide what needs to be placed on that square. The arrays also communicate with eachother to make sure it doesnt place two things on the same square that cant be placed on the same square. For example it makes sure it doesnt place enemies in walls.
+                                </p>
+                                <div class="imageBox">
+                                        <img src="images/levelGenerationExplenationImages/levelGenGrid5.png" style="width: 100%">
+                                </div>
+                                <div class="imageBox">
+                                        <img src="images/levelGenerationExplenationImages/levelGenGrid6.png" style="width: 100%">
+                                </div>
+                                <div class="imageBox">
+                                        <img src="images/levelGenerationExplenationImages/levelGenGrid7.png" style="width: 100%">
+                                </div>
+                                <div class="imageBox">
+                                        <img src="images/levelGenerationExplenationImages/levelGenGrid8.png" style="width: 100%">
+                                </div>
+                                <p>
+                                    After that each room checks the values of the rooms next to it. If those values are (0, 0, 0, 0) then its empty and the room will place a wall between the empty room and itself. If we didnt prevent the rooms from generating on the edge then we would get an index out of range error at this step.
+                                </p>
+                                <div class="imageBox">
+                                        <img src="images/levelGenerationExplenationImages/levelGenGrid9.png" style="width: 100%">
+                                </div>
+                                <p>
+                                    Below you can see a video of the rooms getting generated.
+                                </p>
+                                <iframe width="420" height="315" src="https://www.youtube.com/embed/UqiVNuXWnYY" allowfullscreen>
+                                </iframe>
+                            </div>
+                            </div>
+                            <div class="contentBackgroundBottomImage">
+                            </div>
+                            </div>
+                        <div class="waterContent">
+
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="backgroundBottomImage">
+                </div>
+        </ul>  
+    </nav>

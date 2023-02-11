@@ -1,0 +1,461 @@
+a:link {
+    color: black;
+    text-decoration: none;
+}
+a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.backgroundBox {
+    display: flex;
+    flex-direction: column;
+}
+
+.titleBox {
+    word-wrap: break-word;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: auto;
+    max-width: 75vw;
+    background-color: transparent;
+}
+
+.containerBox {
+    margin-top: 0vh;
+    margin-right: 0;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.contentBox {
+    margin-top: calc(-0.5625vw - 40vh);
+    margin-right: 0;
+    max-width: 70vh;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+}
+
+
+/*mobile only style*/
+.backgroundTopImage {
+    aspect-ratio: 1/1;
+    margin-top: -1vw;
+    display: flex;
+    flex-direction: column;
+    image-rendering: pixelated;
+    background: url(baseImage/backgroundImagesMobile/backgroundTopImage.png);
+    background-size: contain;
+    background-position: bottom;
+}
+.backgroundMidImage {
+    display: flex;
+    width: 100vw;
+    height: auto;
+    flex-direction: column;
+    image-rendering: pixelated;
+    background: url(baseImage/backgroundImagesMobile/backgroundMidImage.png);
+    background-repeat: repeat-y; 
+    background-size: contain;
+}
+.backgroundBottomImage {
+    display: flex;
+    flex-direction: column;
+    image-rendering: pixelated;
+    background: url(baseImage/backgroundImagesMobile/backgroundBottomImage.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+    
+.contentBackgroundTopImage {
+    aspect-ratio: 1/1;
+    margin-right: 0;
+    width: inherit;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    image-rendering: pixelated;
+    background-repeat: no-repeat;
+    background: url(baseImage/backgroundImagesMobile/textBackgroundTopImage.png);
+    background-size: cover;
+}
+.contentBackgroundMidImage {
+    aspect-ratio: 1/1;
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    image-rendering: pixelated;
+    background-repeat: repeat-y;
+    background: url(baseImage/backgroundImagesMobile/textBackgroundMidImage.png);
+    background-size: contain;
+}
+.contentBackgroundBottomImage {
+    aspect-ratio: 1/1;
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    image-rendering: pixelated;
+    background-repeat: repeat-y;
+    background: url(baseImage/backgroundImagesMobile/textBackgroundBottomImage.png);
+    background-size: contain;
+}
+    
+.textBox {
+    color: azure;
+    margin-right: 0vw;
+    margin-left: auto;
+    word-wrap: break-word;
+    padding-left: 10px;
+    padding-right: 0px;
+    width: auto;
+    max-width: 75vw;
+    background-color: transparent;
+}
+
+/*pc only style*/
+@media (min-width: 70vh) {
+    .backgroundTopImage {
+        aspect-ratio: 16/9;
+        /* 9vw/16 = distance between image and top */
+        margin-top: calc(-9vw/16);
+        display: flex;
+        flex-direction: column;
+        image-rendering: pixelated;
+        background: url(baseImage/backgroundImagesPc/backgroundTopImage.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: bottom;
+    }
+    .backgroundMidImage {
+        margin-top: 0px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        image-rendering: pixelated;
+        background: url(baseImage/backgroundImagesPc/BackgroundMidImage2.png), url(baseImage/backgroundImagesPc/backgroundMidImage.png);
+        background-repeat: repeat-y;
+        background-size: cover, contain;
+    }
+    .backgroundBottomImage {
+        aspect-ratio: 16/9;
+        display: flex;
+        flex-direction: column;
+        image-rendering: pixelated;
+        background: url(baseImage/backgroundImagesPc/backgroundBottomImage.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    
+    .contentBackgroundTopImage {
+        aspect-ratio: 16/9;
+        margin-right: 0;
+        width: inherit;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        image-rendering: pixelated;
+        background-repeat: no-repeat;
+        background: url(baseImage/backgroundImagesPc/textBackgroundTopImage.png);
+        background-size: cover;
+    }
+    .contentBackgroundMidImage {
+        aspect-ratio: 16/9;
+        margin-right: 0;
+        display: flex;
+        flex-direction: column;
+        image-rendering: pixelated;
+        background-repeat: repeat-y;
+        background: url(baseImage/backgroundImagesPc/textBackgroundMidImage.png);
+        background-size: contain;
+    }
+    .contentBackgroundBottomImage {
+        aspect-ratio: 16/9;
+        margin-right: 0;
+        display: flex;
+        flex-direction: column;
+        image-rendering: pixelated;
+        background-repeat: repeat-y;
+        background: url(baseImage/backgroundImagesPc/textBackgroundBottomImage.png);
+        background-size: contain;
+    }
+    
+    .textBox {
+        color: rgb(179,174,169);
+        margin-left: 10vw;
+        word-wrap: break-word;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: auto;
+        max-width: 55vw;
+        background-color: transparent;
+    }
+}
+
+
+.waterContent {
+    margin-left: auto;
+    margin-right: 0;
+    width: 20%;
+    image-rendering: pixelated;
+    background-color: transparent;
+}
+
+.linkTextBox {
+    color: rgb(139,134,129);
+    margin-right: 5vw;
+    margin-left: 15vw;
+    word-wrap: break-word;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: auto;
+    background-color: rgb(61,61,61);;
+}
+.linkTextBox:hover {
+    color: black;
+    margin-right: 5vw;
+    margin-left: 15vw;
+    transition-duration: 0.3s;
+    word-wrap: break-word;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: auto;
+    background-color: rgb(139,134,129);;
+}
+
+.imageBox {
+    text-align: left;
+    margin-left: 10vw;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: auto;
+    max-width: 75vw;
+    height: auto;
+    max-width: 75vw;
+    image-resolution: snap;
+    background-color: rgb(139,134,129);
+    ;
+}
+
+
+.sideBar {
+    z-index: 10;
+    display: flex;
+    position: fixed;
+    top: 0px;
+    flex-direction: column;
+    height: 100vh;
+    width: 18vw;
+    max-width: 16vh;
+    image-rendering: pixelated;
+    background: url(baseImage/sideBar.png);
+    background-size: contain;
+    
+}
+.iconBox {
+    display: flex;
+    flex-direction: column;
+    width: 16vw;
+    max-width: 14.3vh;
+}
+
+
+.logo {
+    margin: auto;
+    width: 14vw;
+    height: 14vw;
+    max-width: 12vh;
+    max-height: 12vh;
+    image-rendering: pixelated;
+    background: url(baseImage/baseIcon/logo.png);
+    background-size: contain;
+}
+
+
+.home {
+    margin: auto;
+    width: 14vw;
+    height: 14vw;
+    max-width: 12vh;
+    max-height: 12vh;
+    image-rendering: pixelated;
+    background: url(baseImage/baseIcon/home.png);
+    background-size: contain;
+}
+.home:hover {
+    transition-duration: 0.3s;
+    margin: auto;
+    width: 14vw;
+    height: 14vw;
+    max-width: 12vh;
+    max-height: 12vh;
+    image-rendering: pixelated;
+    background: url(baseImage/baseIcon/homeSelected.png);
+    background-size: contain;
+}
+.homeSelected {
+    margin: auto;
+    width: 14vw;
+    height: 14vw;
+    max-width: 12vh;
+    max-height: 12vh;
+    image-rendering: pixelated;
+    background: url(baseImage/baseIcon/homeSelected.png);
+    background-size: contain;
+}
+
+
+.games {
+    margin: auto;
+    width: 14vw;
+    height: 14vw;
+    max-width: 12vh;
+    max-height: 12vh;
+    image-rendering: pixelated;
+    background: url(baseImage/baseIcon/games.png);
+    background-size: contain;
+}
+.games:hover {
+    transition-duration: 0.3s;
+    margin: auto;
+    width: 14vw;
+    height: 14vw;
+    max-width: 12vh;
+    max-height: 12vh;
+    image-rendering: pixelated;
+    background: url(baseImage/baseIcon/gamesSelected.png);
+    background-size: contain;
+}
+.gamesSelected {
+    margin: auto;
+    width: 14vw;
+    height: 14vw;
+    max-width: 12vh;
+    max-height: 12vh;
+    image-rendering: pixelated;
+    background: url(baseImage/baseIcon/gamesSelected.png);
+    background-size: contain;
+}
+
+
+.school {
+    margin: auto;
+    width: 14vw;
+    height: 14vw;
+    max-width: 12vh;
+    max-height: 12vh;
+    image-rendering: pixelated;
+    background: url(baseImage/baseIcon/school.png);
+    background-size: contain;
+}
+.school:hover {
+    transition-duration: 0.3s;
+    margin: auto;
+    width: 14vw;
+    height: 14vw;
+    max-width: 12vh;
+    max-height: 12vh;
+    image-rendering: pixelated;
+    background: url(baseImage/baseIcon/schoolSelected.png);
+    background-size: contain;
+}
+.schoolSelected {
+    margin: auto;
+    width: 14vw;
+    height: 14vw;
+    max-width: 12vh;
+    max-height: 12vh;
+    image-rendering: pixelated;
+    background: url(baseImage/baseIcon/schoolSelected.png);
+    background-size: contain;
+}
+
+
+.other {
+    margin: auto;
+    width: 14vw;
+    height: 14vw;
+    max-width: 12vh;
+    max-height: 12vh;
+    image-rendering: pixelated;
+    background: url(baseImage/baseIcon/other.png);
+    background-size: contain;
+}
+.other:hover {
+    transition-duration: 0.3s;
+    margin: auto;
+    width: 14vw;
+    height: 14vw;
+    max-width: 12vh;
+    max-height: 12vh;
+    image-rendering: pixelated;
+    background: url(baseImage/baseIcon/otherSelected.png);
+    background-size: contain;
+}
+.otherSelected {
+    margin: auto;
+    width: 14vw;
+    height: 14vw;
+    max-width: 12vh;
+    max-height: 12vh;
+    image-rendering: pixelated;
+    background: url(baseImage/baseIcon/otherSelected.png);
+    background-size: contain;
+}
+
+.backNextBox {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-bottom: 0;
+    width: 14vw;
+    height: 14vw;
+    max-width: 12vh;
+    max-height: 12vh;
+}
+.backButton {
+    margin: auto;
+    width: 7vw;
+    height: 14vw;
+    max-width: 6vh;
+    max-height: 12vh;
+    image-rendering: pixelated;
+    background: url(baseImage/baseIcon/back.png);
+    background-size: contain;
+}
+.backButton:hover {
+    transition-duration: 0.3s;
+    margin: auto;
+    width: 7vw;
+    height: 14vw;
+    max-width: 6vh;
+    max-height: 12vh;
+    image-rendering: pixelated;
+    background: url(baseImage/baseIcon/backSelected.png);
+    background-size: contain;
+}
+.nextButton {
+    margin: auto;
+    width: 7vw;
+    height: 14vw;
+    max-width: 6vh;
+    max-height: 12vh;
+    image-rendering: pixelated;
+    background: url(baseImage/baseIcon/next.png);
+    background-size: contain;
+}
+.nextButton:hover {
+    transition-duration: 0.3s;
+    margin: auto;
+    width: 7vw;
+    height: 14vw;
+    max-width: 6vh;
+    max-height: 12vh;
+    image-rendering: pixelated;
+    background: url(baseImage/baseIcon/nextSelected.png);
+    background-size: contain;
+}

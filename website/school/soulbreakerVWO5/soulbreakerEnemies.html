@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>kasia games</title>
+<link href ="../../baseStyle/base.css" rel="stylesheet">
+</head>
+<style>
+    body, html {
+  height: 100%;
+  margin: 0;
+}
+body {
+    background-size: cover;
+    background-color: #1e3139;
+    font-family: "Franklin Gothic Medium";
+}
+</style>
+    <nav>
+        <ul style="padding-left: 0px" style="margin-bottom: 0px">
+            <div class="backgroundBox">
+                
+                <!-- sidebarmenu -->
+                <div class="sideBar">
+                    <div class="iconBox">
+                        <div class="logo">
+                        </div>
+                        
+                        <a href="../../home/home.html">
+                        <div class="home">
+                        </div>
+                        </a>
+                        
+                        <a href="../../games/games.html">
+                        <div class="games">
+                        </div>
+                        </a>
+                            
+                        <a href="../../school/school.html">
+                        <div class="school">
+                        </div>
+                        </a>
+                            
+                        <a href="../../other/other.html">
+                        <div class="other">
+                        </div>
+                        </a>
+                        
+                        <div class="backNextBox">
+                            <a href="soulbreakerLevelGeneration.html">
+                            <div class="backButton">
+                            </div>
+                            </a>
+                            <a href="soulbreakerPlayer.html">
+                            <div class="nextButton">
+                            </div>
+                            </a>
+                        </div>
+                    </div>  
+                </div>
+                
+                <!-- background -->
+                <div class="backgroundTopImage">
+                </div>
+                <div class="backgroundMidImage">
+                    <div class="containerBox">
+                        <div class="contentBox">
+                            <div class="contentBackgroundTopImage">
+                                <div class="titelBox">
+                                </div>
+                            </div>
+                                <div class="contentBackgroundMidImage">
+                                    <div class="textBox">
+                                    <!-- add text here -->
+                                        <h1>
+                                            What types of enemies are there and what do they do?
+                                        </h1>
+                                        <p>
+                                            There arent a lot of different types of enemies. Currently there are only 6 enemies (a blue slime, a living cactus, a robot cactus, two scorpions and an explosive cactus). the game also has an endboss thats a large scorpion. we didnt add the exploding cactus to the game because we didnt have enough time.
+                                        </p>
+                                        <h2>
+                                            What types of attacks are there and how do they work?
+                                        </h2>
+                                        <p>
+                                            The enemies have different attacks. The slime and one of the scorpions walk to the player to attack, the cactus and the other scorpion trow one thing to the player, the exploding cactus walks to the player and explodes and the robot cactus shoots multiple bullets using a machine gun.
+                                        </p>
+                                        <h3>
+                                            Enemies with melee attacks.
+                                        </h3>
+                                        <p>
+                                            The blue slime and the scorpion have different walking speeds. They also have a variable that decides how far they can look. When an enemie sees the player it uses pathfinding to walk to the player. And when its next to the player it atacks.
+                                        </p>
+                                        <h4>
+                                            Enemies with ranged attacks.
+                                        </h4>
+                                        <p>
+                                            Most ranged enemies try to keep distance from the player. When they see the player they use the instantiate function to load a new bullet a variable decides how many bullets will be loaded and how much time there is between loading bullets. The code in the bullet dicides what it will do.
+                                        </p>
+                                        <h5>
+                                            How do the bullets work?
+                                        </h5>
+                                        <p>
+                                            First the bullet uses the position of the player and itself to decide how far it needs to move in each dirrection and stores those values in a vector. Then it normalizes that vector to get the dirrection. You can see it in the image below. Blue is the bullet, red is the player, purple is the vector and green is the normalized vector.
+                                        </p>
+                                        <div class="imageBox">
+                                            <img src="images/bulletExplenationImages/bullet.png" style="width: 100%">
+                                        </div>
+                                        <p>
+                                            Then it adds the variable RandomDirection to the normalized vector so the bullet doesnt go perfectly straight. The variable RandomDirection has a min and a max that can be changed using a different variable. It also uses the variable RandomDirection and transform.position.rotation to change the rotation of the bullet. Orange shows the range of RandomDirection and yellow shows the normalized vector after RandomDirection has been added.
+                                        </p>
+                                        <div class="imageBox">
+                                            <img src="images/bulletExplenationImages/bullet1.png" style="width: 100%">
+                                        </div>
+                                        <p>
+                                            The things that i just explained happen in Start. Start happens 1 time per bullet and only happens before fixed update. In FixedUpdate it multiplies the variable direction with the variable BulletSpeed and does that every milisecond. If we used Update then it wil update every frame and the bullet wil move faster on a faster pc. The blue line shows how the bullet wil move.
+                                        </p>
+                                        <div class="imageBox">
+                                            <img src="images/bulletExplenationImages/bullet2.png" style="width: 100%">
+                                        </div>
+                                        <p>
+                                            To make sure the bullet doesnt go trough walls we use the OnTriggerExit function. That function deletes the bullet after it exits an object with an trigger. It ignores the trigger off the enemie that shot the bullet. If it didnt ignore that trigger then the bullet would get deleted in front of the enemie. The bullet also has its own collision box and if the player is inside that collosion box the variable bulletDamage will get removed from the variable playerHealth.PlayerHealth.
+                                        </p>
+                                    </div>
+                            </div>
+                            <div class="contentBackgroundBottomImage">
+                            </div>
+                            </div>
+                        <div class="waterContent">
+
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="backgroundBottomImage">
+                </div>
+        </ul>  
+    </nav>
