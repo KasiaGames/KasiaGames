@@ -54,6 +54,7 @@ a:visited {
     display: flex;
     width: 100vw;
     height: auto;
+    min-height: 100vw;
     flex-direction: column;
     image-rendering: pixelated;
     background: url(baseImage/backgroundImagesMobile/backgroundMidImage.png);
@@ -131,6 +132,7 @@ a:visited {
     .backgroundMidImage {
         margin-top: 0px;
         height: auto;
+        min-height: 56.25vw;
         display: flex;
         flex-direction: column;
         width: 100%;
