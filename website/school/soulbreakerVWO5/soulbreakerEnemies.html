@@ -75,7 +75,7 @@ body {
                                             What types of enemies are there and what do they do?
                                         </h1>
                                         <p>
-                                            There arent a lot of different types of enemies. Currently there are only 6 enemies (a blue slime, a living cactus, a robot cactus, two scorpions and an explosive cactus). the game also has an endboss thats a large scorpion. we didnt add the exploding cactus to the game because we didnt have enough time.
+                                            There arent a lot of different types of enemies. Currently there are only 6 enemies (a blue slime, a living cactus, a robot cactus, two scorpions and an explosive cactus). the game also has an endboss thats a large scorpion. we didnt add the exploding cactus to the game because we didnt have enough time. When an enemie dies it will drop coins that can be used to buy weapons.
                                         </p>
                                         <h2>
                                             What types of attacks are there and how do they work?
@@ -118,6 +118,12 @@ body {
                                         </div>
                                         <p>
                                             To make sure the bullet doesnt go trough walls we use the OnTriggerExit function. That function deletes the bullet after it exits an object with an trigger. It ignores the trigger off the enemie that shot the bullet. If it didnt ignore that trigger then the bullet would get deleted in front of the enemie. The bullet also has its own collision box and if the player is inside that collosion box the variable bulletDamage will get removed from the variable playerHealth.PlayerHealth.
+                                        </p>
+                                        <h6>
+                                            How does the boss fight work?
+                                        </h6>
+                                        <p>
+                                            We also made a boss fight. In the boss fight you fight agains a gaint scorpion. The gaint scorpion has 3 attacks. It can send smaller scorpions to the player, shoot poison bullets to the player and dig to the player to attack. To spawn the smaller scorpions it activates a different GameObject that will spawn the scorpions and uses a variable to decide how much it needs to spawn. The gaint scorpion can also shoot poision bullets that work the same as other bullets but leave behind a poision cloud that can damage the player. The gaint scorpion can also attack the player by digging underground then moving to the player and going above ground again. When its above ground it will attack the player if its close. After the attack it will be tired and the player can attack. After some time the scorpion will move back.
                                         </p>
                                     </div>
                             </div>
