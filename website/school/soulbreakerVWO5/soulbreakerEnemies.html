@@ -77,27 +77,27 @@ body {
                                         <p>
                                             There arent a lot of different types of enemies. Currently there are only 6 enemies (a blue slime, a living cactus, a robot cactus, two scorpions and an explosive cactus). the game also has an endboss thats a large scorpion. we didnt add the exploding cactus to the game because we didnt have enough time. When an enemie dies it will drop coins that can be used to buy weapons.
                                         </p>
-                                        <h2>
+                                        <h1>
                                             What types of attacks are there and how do they work?
-                                        </h2>
+                                        </h1>
                                         <p>
                                             The enemies have different attacks. The slime and one of the scorpions walk to the player to attack, the cactus and the other scorpion trow one thing to the player, the exploding cactus walks to the player and explodes and the robot cactus shoots multiple bullets using a machine gun.
                                         </p>
-                                        <h3>
+                                        <h1>
                                             Enemies with melee attacks.
-                                        </h3>
+                                        </h1>
                                         <p>
                                             The blue slime and the scorpion have different walking speeds. They also have a variable that decides how far they can look. When an enemie sees the player it uses pathfinding to walk to the player. And when its next to the player it atacks.
                                         </p>
-                                        <h4>
+                                        <h1>
                                             Enemies with ranged attacks.
-                                        </h4>
+                                        </h1>
                                         <p>
                                             Most ranged enemies try to keep distance from the player. When they see the player they use the instantiate function to load a new bullet a variable decides how many bullets will be loaded and how much time there is between loading bullets. The code in the bullet dicides what it will do.
                                         </p>
-                                        <h5>
+                                        <h1>
                                             How do the bullets work?
-                                        </h5>
+                                        </h1>
                                         <p>
                                             First the bullet uses the position of the player and itself to decide how far it needs to move in each dirrection and stores those values in a vector. Then it normalizes that vector to get the dirrection. You can see it in the image below. Blue is the bullet, red is the player, purple is the vector and green is the normalized vector.
                                         </p>
@@ -119,60 +119,67 @@ body {
                                         <p>
                                             To make sure the bullet doesnt go trough walls we use the OnTriggerExit function. That function deletes the bullet after it exits an object with an trigger. It ignores the trigger off the enemie that shot the bullet. If it didnt ignore that trigger then the bullet would get deleted in front of the enemie. The bullet also has its own collision box and if the player is inside that collosion box the variable bulletDamage will get removed from the variable playerHealth.PlayerHealth.
                                         </p>
-                                        <h6>
+                                        <h1>
                                             How does the boss fight work?
-                                        </h6>
+                                        </h1>
                                         <p>
                                             We also made a boss fight. In the boss fight you fight agains a gaint scorpion. The gaint scorpion has 3 attacks. It can send smaller scorpions to the player, shoot poison bullets to the player and dig to the player to attack. To spawn the smaller scorpions it activates a different GameObject that will spawn the scorpions and uses a variable to decide how much it needs to spawn. The gaint scorpion can also shoot poision bullets that work the same as other bullets but leave behind a poision cloud that can damage the player. The gaint scorpion can also attack the player by digging underground then moving to the player and going above ground again. When its above ground it will attack the player if its close. After the attack it will be tired and the player can attack. After some time the scorpion will move back.
                                         </p>
-                                        <h7>
+                                        <h1>
                                             How does the pathfinding work?
-                                        </h7>
+                                        </h1>
                                         <p>
                                             I didnt make the code for the pathfinding myself, but i do think i understand how it works. I chose to use pathfinding with a flowfield because there are a lot of enemies. Im using a grid to explain how the pathfinding works. The green square is the player and the red squares are the walls.
                                         </p>
                                         <div class="imageBox">
-                                            <img src="images/pathfindingExplenationImages/pathfindingGrid.png" style="width: 100%">
+                                            <img src="images/pathfindingExplenationImages/pathfindGrid.png" style="width: 100%">
                                         </div>
                                         <p>
                                             The flowfield starts at the player with a value of 1. After that it it uses a floadfill were it looks at the squares next to the player and gives them a value of 2. Then it looks at the empty squares next to the squares with the value 2 and gives to squares a value thats 1 higher than 2. This is repeated until the entire level is filled.
                                         </p>
                                         <div class="imageBox">
-                                            <img src="images/pathfindingExplenationImages/pathfindingGrid1.png" style="width: 100%">
+                                            <img src="images/pathfindingExplenationImages/pathfindGrid1.png" style="width: 100%">
                                         </div>
                                         <div class="imageBox">
-                                            <img src="images/pathfindingExplenationImages/pathfindingGrid2.png" style="width: 100%">
+                                            <img src="images/pathfindingExplenationImages/pathfindGrid2.png" style="width: 100%">
                                         </div>
                                         <div class="imageBox">
-                                            <img src="images/pathfindingExplenationImages/pathfindingGrid3.png" style="width: 100%">
+                                            <img src="images/pathfindingExplenationImages/pathfindGrid3.png" style="width: 100%">
                                         </div>
                                         <p>
                                             Then it makes a vector at every square that point to the square thats next to it that has the lowest value.
                                         </p>
                                         <div class="imageBox">
-                                            <img src="images/pathfindingExplenationImages/pathfindingGrid4.png" style="width: 100%">
+                                            <img src="images/pathfindingExplenationImages/pathfindGrid4.png" style="width: 100%">
                                         </div>
                                         <div class="imageBox">
-                                            <img src="images/pathfindingExplenationImages/pathfindingGrid5.png" style="width: 100%">
+                                            <img src="images/pathfindingExplenationImages/pathfindGrid5.png" style="width: 100%">
                                         </div>
                                         <p>
                                             If an enemie is on a square then it will folow the direction of the vector on the square. By following those vectors the enemie will eventualt reach the player. the pink circle is the enemie and the black line is the path that it folows.
                                         </p>
                                         <div class="imageBox">
-                                            <img src="images/pathfindingExplenationImages/pathfindingGrid6.png" style="width: 100%">
+                                            <img src="images/pathfindingExplenationImages/pathfindGrid6.png" style="width: 100%">
                                         </div>
                                         <div class="imageBox">
-                                            <img src="images/pathfindingExplenationImages/pathfindingGrid7.png" style="width: 100%">
+                                            <img src="images/pathfindingExplenationImages/pathfindGrid7.png" style="width: 100%">
                                         </div>
                                         <div class="imageBox">
-                                            <img src="images/pathfindingExplenationImages/pathfindingGrid8.png" style="width: 100%">
+                                            <img src="images/pathfindingExplenationImages/pathfindGrid8.png" style="width: 100%">
                                         </div>
                                         <div class="imageBox">
-                                            <img src="images/pathfindingExplenationImages/pathfindingGrid9.png" style="width: 100%">
+                                            <img src="images/pathfindingExplenationImages/pathfindGrid9.png" style="width: 100%">
                                         </div>
                                         <p>
-                                            Below you can see an video of an enemie in the game.
+                                            Below you can see an video of the enemies in the game.
                                         </p>
+                                        <iframe width="420" height="315" src="https://www.youtube.com/embed/5RizhAxV92w" allowfullscreen>
+                                </iframe>
+                                        <p>
+                                            Below you can see a video of the bossfight
+                                        </p>
+                                        <iframe width="420" height="315" src="https://www.youtube.com/embed/N9oiMFIJnNk" allowfullscreen>
+                                </iframe>
                                     </div>
                             </div>
                             <div class="contentBackgroundBottomImage">
