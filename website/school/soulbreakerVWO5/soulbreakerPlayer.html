@@ -187,6 +187,15 @@ Movement:
                                         <h1>
                                             How do the melee attacks work?
                                         </h1>
+                                        <p>
+                                            If a player chose the class sword user then the player uses melee attack. To attack the player needs to be close to the enemie. The sword lenght decides how close the player needs to be. When a player is close enough it can attack by clicking on the enemie. Then the weapon wil spawn in a hitbox for a short time that will damage the enemie. The amount of damage it does is determent by the stats of the weapon. The weapon also has knockback and the enemie gets pushed back. To know in what direction the enemie needs to move the enemie checks the position of the player and compares it to its own position then saves that in a vector. Then it normalizes that vector, multiplies it with the weapon knockback and checks for collisions. Then it adds that vector to its own position.
+                                        </p>
+                                        <h1>
+                                            How do the ranged attacks work?
+                                        </h1>
+                                        <p>
+                                            If a player chose for the archer class then the player uses ranged attacks. To attack the player clicks on the enemie then the player spawns in an arrow. The arrow will move to the the position where the player clicked. when an enemie is in the colision box of the arrow then it gets damage and knockback. The arrow also gets deleted using the onTriggerExit function.
+                                        </p>
                                 </div>
                             </div>
                             <div class="contentBackgroundBottomImage">
