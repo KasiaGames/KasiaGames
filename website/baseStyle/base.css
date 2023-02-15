@@ -67,6 +67,7 @@ pre {
     background-size: contain;
 }
 .backgroundBottomImage {
+    aspect-ratio: 1/1;
     display: flex;
     flex-direction: column;
     image-rendering: pixelated;
@@ -109,7 +110,7 @@ pre {
 }
     
 .textBox {
-    color: azure;
+    color: rgb(179,174,169);
     margin-right: 0vw;
     margin-left: auto;
     word-wrap: break-word;
