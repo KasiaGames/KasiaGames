@@ -229,7 +229,7 @@ pre {
 }
 
 /* For landscape ipad layouts only */
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+@media only screen and (device-width: 1024px) and (orientation:landscape) {
         .backgroundTopImage {
         aspect-ratio: 16/9;
         /* 9vw/16 = distance between image and top */
@@ -279,10 +279,12 @@ pre {
     .contentBackgroundMidImage {
         
         margin-right: 0;
-        width: auto;
+        width: 70vh;
+        height: auto;
         display: flex;
         flex-direction: column;
         background: red;
+        background-size: contain, auto;
     }
     .contentBackgroundBottomImage {
         aspect-ratio: 16/9;
