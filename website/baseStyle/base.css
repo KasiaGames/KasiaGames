@@ -290,6 +290,18 @@ pre {
     image-resolution: snap;
     background-color: rgb(139,134,129);;
 }
+    .contentBackgroundMidImage {
+    
+    margin-right: 0;
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    image-rendering: pixelated;
+    background-repeat: repeat-y;
+    background: url(baseImage/backgroundImagesPc/textBackgroundMidImage.png);
+    -webkit- background-size: 700px auto;
+    background-size: 700px auto;
+}
 }
 
 .imageBoxHalf {
