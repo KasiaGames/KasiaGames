@@ -195,7 +195,7 @@ pre {
         image-rendering: pixelated;
         background-repeat: repeat-y;
         background: url(baseImage/backgroundImagesPc/textBackgroundMidImage.png);
-        background-size: contain;
+        background-size: 100% auto;
     }
     .contentBackgroundBottomImage {
         aspect-ratio: 16/9;
