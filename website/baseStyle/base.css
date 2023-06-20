@@ -279,11 +279,10 @@ pre {
     .contentBackgroundMidImage {
         
         margin-right: 0;
-        width: inherit;
+        width: auto;
         display: flex;
         flex-direction: column;
         background: red;
-        background-size: 70vh auto;
     }
     .contentBackgroundBottomImage {
         aspect-ratio: 16/9;
