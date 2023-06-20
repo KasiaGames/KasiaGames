@@ -1,4 +1,9 @@
 ### Hi there 👋
+<picture>
+ <source media="(prefers-color-scheme: dark)" srcset="http://www.kasia.games/website/baseStyle/baseImage/baseIcon/logo.png">
+ <source media="(prefers-color-scheme: light)" srcset="http://www.kasia.games/website/baseStyle/baseImage/baseIcon/logo.png">
+ <img alt="YOUR-ALT-TEXT" src="http://www.kasia.games/website/baseStyle/baseImage/baseIcon/logo.png">
+</picture>
 
 <!--
 **KasiaGames/KasiaGames** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
