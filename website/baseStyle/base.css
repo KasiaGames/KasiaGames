@@ -37,13 +37,12 @@ pre {
 .contentBox {
     margin-top: calc(-0.5625vw - 40vh);
     margin-right: 0;
-    max-width: 70vh;
+    max-width: 100vh;
     margin-left: auto;
     display: flex;
     flex-direction: column;
     background-color: transparent;
 }
-
 .contentRowBox {
     width: inherit;
     display: flex;
@@ -52,8 +51,135 @@ pre {
     background-color: transparent;
 }
 
+.imageBox {
+    color: black;
+    text-align: left;
+    margin-left: 10vw;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: auto;
+    max-width: 75vw;
+    height: auto;
+    image-resolution: snap;
+    background-color: rgb(139,134,129);;
+}
 
-/*for mobile only*/
+/*for pc only*/
+@media only screen and (min-width: 100vh){
+            
+.backgroundTopImage {
+        aspect-ratio: 16/9;
+        /* 9vw/16 = distance between image and top */
+        margin-top: calc(-9vw/16);
+        display: flex;
+        flex-direction: column;
+        image-rendering: pixelated;
+        background: url(baseImage/backgroundImagesPc/backgroundTopImage.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: bottom;
+    }
+.backgroundMidImage {
+        margin-top: 0px;
+        height: auto;
+        min-height: 56.25vw;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        image-rendering: pixelated;
+        background: url(baseImage/backgroundImagesPc/backgroundMidImage2.png), url(baseImage/backgroundImagesPc/backgroundMidImage.png);
+        background-repeat: repeat-y;
+        background-size: cover, contain;
+    }
+.backgroundBottomImage {
+        aspect-ratio: 16/9;
+        display: flex;
+        flex-direction: column;
+        image-rendering: pixelated;
+        background: url(baseImage/backgroundImagesPc/backgroundBottomImage.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    
+.contentBackgroundTopImage {
+        aspect-ratio: 16/9;
+        margin-right: 0;
+        width: inherit;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        image-rendering: pixelated;
+        background-repeat: no-repeat;
+        background: url(baseImage/backgroundImagesPc/textBackgroundTopImage.png);
+        background-size: cover;
+    }     
+.contentBackgroundMidImage {
+        
+        margin-right: 0;
+        width: inherit;
+        display: flex;
+        flex-direction: column;
+        image-rendering: pixelated;
+        background-repeat: repeat-y;
+        background: url(baseImage/backgroundImagesPc/textBackgroundMidImage.png);
+        background-size: 100% auto;
+    }    
+.contentBackgroundBottomImage {
+        aspect-ratio: 16/9;
+        margin-right: 0;
+        display: flex;
+        flex-direction: column;
+        image-rendering: pixelated;
+        background-repeat: repeat-y;
+        background: url(baseImage/backgroundImagesPc/textBackgroundBottomImage.png);
+        background-size: contain;
+    }
+    
+.textBox {
+        color: rgb(179,174,169);
+        margin-left: 10vw;
+        word-wrap: break-word;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: auto;
+        max-width: 55vw;
+        background-color: transparent;
+}  
+.textBoxHalf {
+        color: rgb(179,174,169);
+        word-wrap: break-word;
+        width: auto;
+        max-width: 50%;
+        background-color: transparent;
+    }
+    
+.linkTextBox {
+    color: rgb(139,134,129);
+    margin-right: 5vw;
+    margin-left: 15vw;
+    word-wrap: break-word;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: auto;
+    background-color: rgb(61,61,61);;
+}
+.linkTextBox:hover {
+    color: black;
+    margin-right: 5vw;
+    margin-left: 15vw;
+    transition-duration: 0.3s;
+    word-wrap: break-word;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: auto;
+    background-color: rgb(139,134,129);;
+}
+}
+
+/*for mobile and ipad only*/
+@media only screen and (max-width: 100vh){
 .backgroundTopImage {
     aspect-ratio: 1/1;
     margin-top: -1vw;
@@ -117,289 +243,49 @@ pre {
     background: url(baseImage/backgroundImagesMobile/textBackgroundBottomImage.png);
     background-size: contain;
 }
-
+    
+.textBox {
+    color: rgb(179,174,169);
+    margin: auto;
+    word-wrap: break-word;
+    padding-left: 10vw;
+    padding-right: 0px;
+    width: auto;
+    max-width: 75vw;
+    background-color: transparent;
+}
 .textBoxHalf {
         color: rgb(179,174,169);
         word-wrap: break-word;
         width: auto;
         max-width: 38vw;
         background-color: transparent;
-    }
-
-/*for landscape ipad layouts only*/
-@media only screen and (device-width: 1024px) {
-    
-    .textBox {
-        color: rgb(179,174,169);
-        margin-right: 0vw;
-        margin-left: auto;
-        word-wrap: break-word;
-        padding-left: 10px;
-        padding-right: 0px;
-        width: 350px;
-        max-width: 75vw;
-        background-color: transparent;
-    }
-    
-    .imageBox {
-            color: black;
-            text-align: left;
-            margin-left: 10vw;
-            padding-left: 10px;
-            padding-right: 10px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            width: 350px;
-            height: auto;
-            image-resolution: snap;
-            background-color: rgb(139,134,129);;
-    }
-    
-    img {
-        width: 300px;
-        max-width: 350px; 
-    }
-    
-    .backgroundTopImage {
-        aspect-ratio: 16/9;
-        /* 9vw/16 = distance between image and top */
-        width: 100vw;
-        margin-top: calc(-9vw/16);
-        display: flex;
-        flex-direction: column;
-        image-rendering: pixelated;
-        background: url(baseImage/backgroundImagesPc/backgroundTopImage.png);
-        background-repeat: no-repeat;
-        background-size: 1024px auto;
-        background-position: bottom;
-    }
-    .backgroundMidImage {
-        width: 100vw;
-        margin-top: 0px;
-        height: auto;
-        min-height: 56.25vw;
-        display: flex;
-        flex-direction: column;
-        width: 1024px;
-        image-rendering: pixelated;
-        background: url(baseImage/backgroundImagesPc/backgroundMidImage2.png), url(baseImage/backgroundImagesPc/backgroundMidImage.png);
-        background-repeat: repeat-y;
-        background-size: 1024px auto;
-    }
-    .backgroundBottomImage {
-        aspect-ratio: 16/9;
-        width: 100vw;
-        display: flex;
-        flex-direction: column;
-        image-rendering: pixelated;
-        background: url(baseImage/backgroundImagesPc/backgroundBottomImage.png);
-        background-repeat: no-repeat;
-        background-size: 1024px auto;
-    }
-    .contentBackgroundTopImage {
-        aspect-ratio: 16/9;
-        margin-right: 0;
-        width: inherit;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        image-rendering: pixelated;
-        background-repeat: no-repeat;
-        background: url(baseImage/backgroundImagesPc/textBackgroundTopImage.png);
-        background-size: 550px auto;
-    }
-        
-    .contentBackgroundMidImage {
-        margin-right: 0;
-        width: 550px;
-        display: flex;
-        flex-direction: column;
-        image-rendering: pixelated;
-        background-repeat: repeat-y;
-        background: url(baseImage/backgroundImagesPc/textBackgroundMidImage.png);
-        background-size: 550px auto;
-    }
-        
-    .contentBackgroundBottomImage {
-        aspect-ratio: 16/9;
-        margin-right: 0;
-        display: flex;
-        flex-direction: column;
-        image-rendering: pixelated;
-        background-repeat: repeat-y;
-        background: url(baseImage/backgroundImagesPc/textBackgroundBottomImage.png);
-        background-size: 550px auto;
-    }  
-    
-    .linkTextBox {
-        color: rgb(139,134,129);
-        margin-right: 5vw;
-        margin-left: 15vw;
-        word-wrap: break-word;
-        padding-left: 10px;
-        padding-right: 10px;
-        width: 300px;
-        background-color: rgb(61,61,61);;
-    }
-    
-    .linkTextBox:hover {
-        color: black;
-        margin-right: 5vw;
-        margin-left: 15vw;
-        transition-duration: 0.3s;
-        word-wrap: break-word;
-        padding-left: 10px;
-        padding-right: 10px;
-        width: 300px;
-        background-color: rgb(139,134,129);;
-    }
 }
-
-/*for pc only*/
-@media (min-width: 70vh){
-    @media not all and (device-width: 1024px){
-            
-    .backgroundTopImage {
-        aspect-ratio: 16/9;
-        /* 9vw/16 = distance between image and top */
-        margin-top: calc(-9vw/16);
-        display: flex;
-        flex-direction: column;
-        image-rendering: pixelated;
-        background: url(baseImage/backgroundImagesPc/backgroundTopImage.png);
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: bottom;
-    }
-    .backgroundMidImage {
-        margin-top: 0px;
-        height: auto;
-        min-height: 56.25vw;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        image-rendering: pixelated;
-        background: url(baseImage/backgroundImagesPc/backgroundMidImage2.png), url(baseImage/backgroundImagesPc/backgroundMidImage.png);
-        background-repeat: repeat-y;
-        background-size: cover, contain;
-    }
-    .backgroundBottomImage {
-        aspect-ratio: 16/9;
-        display: flex;
-        flex-direction: column;
-        image-rendering: pixelated;
-        background: url(baseImage/backgroundImagesPc/backgroundBottomImage.png);
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
     
-    .contentBackgroundTopImage {
-        aspect-ratio: 16/9;
-        margin-right: 0;
-        width: inherit;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        image-rendering: pixelated;
-        background-repeat: no-repeat;
-        background: url(baseImage/backgroundImagesPc/textBackgroundTopImage.png);
-        background-size: cover;
-    }
-        
-    .contentBackgroundMidImage {
-        
-        margin-right: 0;
-        width: inherit;
-        display: flex;
-        flex-direction: column;
-        image-rendering: pixelated;
-        background-repeat: repeat-y;
-        background: url(baseImage/backgroundImagesPc/textBackgroundMidImage.png);
-        -webkit- background-size: 70vh auto;
-        background-size: 70vh auto;
-    }
-        
-    .contentBackgroundBottomImage {
-        aspect-ratio: 16/9;
-        margin-right: 0;
-        display: flex;
-        flex-direction: column;
-        image-rendering: pixelated;
-        background-repeat: repeat-y;
-        background: url(baseImage/backgroundImagesPc/textBackgroundBottomImage.png);
-        background-size: contain;
-    }
-    }
-    
-    .textBox {
-        color: rgb(179,174,169);
-        margin-left: 10vw;
-        word-wrap: break-word;
-        padding-left: 10px;
-        padding-right: 10px;
-        width: auto;
-        max-width: 55vw;
-        background-color: transparent;
-    }
-    
-    .textBoxHalf {
-        color: rgb(179,174,169);
-        word-wrap: break-word;
-        width: auto;
-        max-width: 50%;
-        background-color: transparent;
-    }
-}
-
-@media not all and (device-width: 1024px){
 .linkTextBox {
     color: rgb(139,134,129);
-    margin-right: 5vw;
-    margin-left: 15vw;
+    margin: auto;
     word-wrap: break-word;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 10vw;
+    padding-right: 0px;
     width: auto;
+    max-width: 75vw;
     background-color: rgb(61,61,61);;
 }
 .linkTextBox:hover {
     color: black;
-    margin-right: 5vw;
-    margin-left: 15vw;
+    margin: auto;
     transition-duration: 0.3s;
     word-wrap: break-word;
-    padding-left: 10px;
-    padding-right: 10px;
-    width: auto;
-    background-color: rgb(139,134,129);;
-}
-
-.imageBox {
-    color: black;
-    text-align: left;
-    margin-left: 10vw;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: auto;
-    max-width: 75vw;
-    height: auto;
-    image-resolution: snap;
-    background-color: rgb(139,134,129);;
-}
-.textBox {
-    color: rgb(179,174,169);
-    margin-right: 0vw;
-    margin-left: auto;
-    word-wrap: break-word;
-    padding-left: 10px;
+    padding-left: 10vw;
     padding-right: 0px;
     width: auto;
     max-width: 75vw;
-    background-color: transparent;
+    background-color: rgb(139,134,129);;
 }
 }
+
+/*for all devices*/
 
 .waterContent {
     margin-left: auto;
@@ -409,7 +295,6 @@ pre {
     background-color: transparent;
 }
 
-/*for all devices*/
 .imageBoxHalf {
     color: black;
     text-align: left;
@@ -427,6 +312,7 @@ pre {
 }
 
 
+/*side bar*/
 .sideBar {
     z-index: 10;
     display: flex;
