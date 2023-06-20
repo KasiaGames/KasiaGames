@@ -230,90 +230,15 @@ pre {
 
 /* For landscape ipad layouts only */
 @media only screen and (device-width: 1024px) and (orientation:landscape) {
-        .backgroundTopImage {
-        aspect-ratio: 16/9;
-        /* 9vw/16 = distance between image and top */
-        margin-top: calc(-9vw/16);
-        display: flex;
-        flex-direction: column;
-        image-rendering: pixelated;
-        background: url(baseImage/backgroundImagesPc/backgroundTopImage.png);
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: bottom;
-    }
-    .backgroundMidImage {
-        margin-top: 0px;
-        height: auto;
-        min-height: 56.25vw;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        image-rendering: pixelated;
-        background: url(baseImage/backgroundImagesPc/backgroundMidImage2.png), url(baseImage/backgroundImagesPc/backgroundMidImage.png);
-        background-repeat: repeat-y;
-        background-size: cover, contain;
-    }
-    .backgroundBottomImage {
-        aspect-ratio: 16/9;
-        display: flex;
-        flex-direction: column;
-        image-rendering: pixelated;
-        background: url(baseImage/backgroundImagesPc/backgroundBottomImage.png);
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
-    
-    .contentBackgroundTopImage {
-        aspect-ratio: 16/9;
-        margin-right: 0;
-        width: inherit;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        image-rendering: pixelated;
-        background-repeat: no-repeat;
-        background: url(baseImage/backgroundImagesPc/textBackgroundTopImage.png);
-        background-size: cover;
-    }
     .contentBackgroundMidImage {
-        
         margin-right: 0;
         width: 70vh;
         height: auto;
         display: flex;
         flex-direction: column;
+        flex-shrink: auto;
         background: red;
         background-size: contain, auto;
-    }
-    .contentBackgroundBottomImage {
-        aspect-ratio: 16/9;
-        margin-right: 0;
-        display: flex;
-        flex-direction: column;
-        image-rendering: pixelated;
-        background-repeat: repeat-y;
-        background: url(baseImage/backgroundImagesPc/textBackgroundBottomImage.png);
-        background-size: contain;
-    }
-    
-    .textBox {
-        color: rgb(179,174,169);
-        margin-left: 10vw;
-        word-wrap: break-word;
-        padding-left: 10px;
-        padding-right: 10px;
-        width: auto;
-        max-width: 55vw;
-        background-color: transparent;
-    }
-    
-    .textBoxHalf {
-        color: rgb(179,174,169);
-        word-wrap: break-word;
-        width: auto;
-        max-width: 50%;
-        background-color: transparent;
     }
 }
 
