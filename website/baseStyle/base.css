@@ -270,9 +270,26 @@ pre {
     width: auto;
     max-width: 75vw;
     height: auto;
-    max-width: 75vw;
     image-resolution: snap;
     background-color: rgb(139,134,129);;
+}
+
+  /* For landscape ipad layouts only */
+@media only screen and (device-width: 1024px) and (orientation:landscape) {
+.imageBox {
+    color: black;
+    text-align: left;
+    margin-left: 10vw;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: auto;
+    max-width: 700px;
+    height: auto;
+    image-resolution: snap;
+    background-color: rgb(139,134,129);;
+}
 }
 
 .imageBoxHalf {
