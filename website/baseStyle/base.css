@@ -137,9 +137,62 @@ pre {
         background-color: transparent;
     }
 
+  /* For landscape ipad layouts only */
+@media only screen and (device-width: 1024px) and (orientation:landscape) {
+.imageBox {
+    color: black;
+    text-align: left;
+    margin-left: 10vw;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: auto;
+    max-width: 700px;
+    height: auto;
+    image-resolution: snap;
+    background-color: rgb(139,134,129);;
+}
+    .contentBackgroundTopImage {
+        aspect-ratio: 16/9;
+        margin-right: 0;
+        width: inherit;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        image-rendering: pixelated;
+        background-repeat: no-repeat;
+        background: url(baseImage/backgroundImagesPc/textBackgroundTopImage.png);
+        background-size: 550px auto;
+    }
+        
+    .contentBackgroundMidImage {
+        
+        margin-right: 0;
+        width: inherit;
+        display: flex;
+        flex-direction: column;
+        image-rendering: pixelated;
+        background-repeat: repeat-y;
+        background: url(baseImage/backgroundImagesPc/textBackgroundMidImage.png);
+        -webkit- background-size: 70vh auto;
+        background-size: 550px auto;
+    }
+        
+    .contentBackgroundBottomImage {
+        aspect-ratio: 16/9;
+        margin-right: 0;
+        display: flex;
+        flex-direction: column;
+        image-rendering: pixelated;
+        background-repeat: repeat-y;
+        background: url(baseImage/backgroundImagesPc/textBackgroundBottomImage.png);
+        background-size: 550px auto;
+    }
+}
 
 /*pc only style*/
-@media (min-width: 70vh) {
+@media (min-width: 70vh){
     .backgroundTopImage {
         aspect-ratio: 16/9;
         /* 9vw/16 = distance between image and top */
@@ -174,6 +227,7 @@ pre {
         background-size: contain;
     }
     
+    @media (device-width: !1024px){
     .contentBackgroundTopImage {
         aspect-ratio: 16/9;
         margin-right: 0;
@@ -186,6 +240,7 @@ pre {
         background: url(baseImage/backgroundImagesPc/textBackgroundTopImage.png);
         background-size: cover;
     }
+        
     .contentBackgroundMidImage {
         
         margin-right: 0;
@@ -198,6 +253,7 @@ pre {
         -webkit- background-size: 70vh auto;
         background-size: 70vh auto;
     }
+        
     .contentBackgroundBottomImage {
         aspect-ratio: 16/9;
         margin-right: 0;
@@ -207,6 +263,7 @@ pre {
         background-repeat: repeat-y;
         background: url(baseImage/backgroundImagesPc/textBackgroundBottomImage.png);
         background-size: contain;
+    }
     }
     
     .textBox {
@@ -272,36 +329,6 @@ pre {
     height: auto;
     image-resolution: snap;
     background-color: rgb(139,134,129);;
-}
-
-  /* For landscape ipad layouts only */
-@media only screen and (device-width: 1024px) and (orientation:landscape) {
-.imageBox {
-    color: black;
-    text-align: left;
-    margin-left: 10vw;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: auto;
-    max-width: 700px;
-    height: auto;
-    image-resolution: snap;
-    background-color: rgb(139,134,129);;
-}
-    .contentBackgroundMidImage {
-    
-    margin-right: 0;
-    width: inherit;
-    display: flex;
-    flex-direction: column;
-    image-rendering: pixelated;
-    background-repeat: repeat-y;
-    background: url(baseImage/backgroundImagesPc/textBackgroundMidImage.png);
-    -webkit- background-size: 700px auto;
-    background-size: 700px auto;
-}
 }
 
 .imageBoxHalf {
