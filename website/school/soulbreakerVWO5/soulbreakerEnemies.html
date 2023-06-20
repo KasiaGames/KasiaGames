@@ -47,11 +47,11 @@ body {
                         </a>
                         
                         <div class="backNextBox">
-                            <a href="soulbreakerLevelGeneration.html">
+                            <a href="soulbreakerLevelGeneration.html" aria-label="back. Goes a page back.">
                             <div class="backButton">
                             </div>
                             </a>
-                            <a href="soulbreakerPlayer.html">
+                            <a href="soulbreakerPlayer.html" aria-label="next. Goes to the next page.">
                             <div class="nextButton">
                             </div>
                             </a>
@@ -103,19 +103,19 @@ body {
                                             First the bullet uses the position of the player and itself to decide how far it needs to move in each dirrection and stores those values in a vector. Then it normalizes that vector to get the dirrection. You can see it in the image below. Blue is the bullet, red is the player, purple is the vector and green is the normalized vector.
                                         </p>
                                         <div class="imageBox">
-                                            <img src="images/bulletExplenationImages/bullet.png" style="width: 100%">
+                                            <img alt="A grid with a red cube in the bottom right and blue cube at the top left. There is also a purple line connecting the red cube to the blue cube and there is a green line that points from the blue cube to the red cube. The green line is 1 square long." src="images/bulletExplenationImages/bullet.png" style="width: 100%">
                                         </div>
                                         <p>
                                             Then it adds the variable RandomDirection to the normalized vector so the bullet doesnt go perfectly straight. The variable RandomDirection has a min and a max that can be changed using a different variable. It also uses the variable RandomDirection and transform.position.rotation to change the rotation of the bullet. Orange shows the range of RandomDirection and yellow shows the normalized vector after RandomDirection has been added.
                                         </p>
                                         <div class="imageBox">
-                                            <img src="images/bulletExplenationImages/bullet1.png" style="width: 100%">
+                                            <img alt="There are two brown lines comming from the blue cube one pointing to thr right and one pointing downwards and a little bit to the right. There is also a yellow line that has the same lenght as the green line and points in almost the same direction." src="images/bulletExplenationImages/bullet1.png" style="width: 100%">
                                         </div>
                                         <p>
                                             The things that i just explained happen in Start. Start happens 1 time per bullet and only happens before fixed update. In FixedUpdate it multiplies the variable direction with the variable BulletSpeed and does that every milisecond. If we used Update then it wil update every frame and the bullet wil move faster on a faster pc. The blue line shows how the bullet wil move.
                                         </p>
                                         <div class="imageBox">
-                                            <img src="images/bulletExplenationImages/bullet2.png" style="width: 100%">
+                                            <img alt="There is a blue line pointing in the same direction as the yellow line but the blue line is longer." src="images/bulletExplenationImages/bullet2.png" style="width: 100%">
                                         </div>
                                         <p>
                                             To make sure the bullet doesnt go trough walls we use the OnTriggerExit function. That function deletes the bullet after it exits an object with an trigger. It ignores the trigger off the enemie that shot the bullet. If it didnt ignore that trigger then the bullet would get deleted in front of the enemie. The bullet also has its own collision box and if the player is inside that collosion box the variable bulletDamage will get removed from the variable playerHealth.PlayerHealth.
@@ -133,53 +133,53 @@ body {
                                             I didnt make the code for the pathfinding myself, but i do think i understand how it works. I chose to use pathfinding with a flowfield because there are a lot of enemies. Im using a grid to explain how the pathfinding works. The green square is the player and the red squares are the walls.
                                         </p>
                                         <div class="imageBox">
-                                            <img src="images/pathfindingExplenationImages/pathfindGrid.png" style="width: 100%">
+                                            <img alt="A grid with a green cube in the bottom right and 4 red walls that are also made with cubes." src="images/pathfindingExplenationImages/pathfindGrid.png" style="width: 100%">
                                         </div>
                                         <p>
                                             The flowfield starts at the player with a value of 1. After that it it uses a floadfill were it looks at the squares next to the player and gives them a value of 2. Then it looks at the empty squares next to the squares with the value 2 and gives to squares a value thats 1 higher than 2. This is repeated until the entire level is filled.
                                         </p>
                                         <div class="imageBox">
-                                            <img src="images/pathfindingExplenationImages/pathfindGrid1.png" style="width: 100%">
+                                            <img alt="There is now a number 1 on green cube and a number 2 on the squares next to it." src="images/pathfindingExplenationImages/pathfindGrid1.png" style="width: 100%">
                                         </div>
                                         <div class="imageBox">
-                                            <img src="images/pathfindingExplenationImages/pathfindGrid2.png" style="width: 100%">
+                                            <img alt="There is now a number 3 on the squares next to the squares with number 2." src="images/pathfindingExplenationImages/pathfindGrid2.png" style="width: 100%">
                                         </div>
                                         <div class="imageBox">
-                                            <img src="images/pathfindingExplenationImages/pathfindGrid3.png" style="width: 100%">
+                                            <img alt="There is now a number 4 on the squares next to the squares with number 3. This also happens to the other squares except on the squares with walls." src="images/pathfindingExplenationImages/pathfindGrid3.png" style="width: 100%">
                                         </div>
                                         <p>
                                             Then it makes a vector at every square that point to the square thats next to it that has the lowest value.
                                         </p>
                                         <div class="imageBox">
-                                            <img src="images/pathfindingExplenationImages/pathfindGrid4.png" style="width: 100%">
+                                            <img alt="There are now arows that point from squares with a higher value to squares with a lower value." src="images/pathfindingExplenationImages/pathfindGrid4.png" style="width: 100%">
                                         </div>
                                         <div class="imageBox">
-                                            <img src="images/pathfindingExplenationImages/pathfindGrid5.png" style="width: 100%">
+                                            <img alt="There are more arows now that point from squares with a higher value to squares with a lower value." src="images/pathfindingExplenationImages/pathfindGrid5.png" style="width: 100%">
                                         </div>
                                         <p>
                                             If an enemie is on a square then it will folow the direction of the vector on the square. By following those vectors the enemie will eventualt reach the player. the pink circle is the enemie and the black line is the path that it folows.
                                         </p>
                                         <div class="imageBox">
-                                            <img src="images/pathfindingExplenationImages/pathfindGrid6.png" style="width: 100%">
+                                            <img alt="There is a pink cirkle on the left and a line that follows the arrows and goes to the green cube" src="images/pathfindingExplenationImages/pathfindGrid6.png" style="width: 100%">
                                         </div>
                                         <div class="imageBox">
-                                            <img src="images/pathfindingExplenationImages/pathfindGrid7.png" style="width: 100%">
+                                            <img alt="The pink cirkle is folowing the line and is a little bit closer to the green cube." src="images/pathfindingExplenationImages/pathfindGrid7.png" style="width: 100%">
                                         </div>
                                         <div class="imageBox">
-                                            <img src="images/pathfindingExplenationImages/pathfindGrid8.png" style="width: 100%">
+                                            <img alt="The pink cirkle is closer to the green cube." src="images/pathfindingExplenationImages/pathfindGrid8.png" style="width: 100%">
                                         </div>
                                         <div class="imageBox">
-                                            <img src="images/pathfindingExplenationImages/pathfindGrid9.png" style="width: 100%">
+                                            <img alt="The pink cirkle is even closer to the green cube." src="images/pathfindingExplenationImages/pathfindGrid9.png" style="width: 100%">
                                         </div>
                                         <p>
                                             Below you can see an video of the enemies in the game.
                                         </p>
-                                        <iframe width="420" height="315" src="https://www.youtube.com/embed/5RizhAxV92w" allowfullscreen>
+                                        <iframe title="A video that shows the player fighting some enemies." width="420" height="315" src="https://www.youtube.com/embed/5RizhAxV92w" allowfullscreen>
                                 </iframe>
                                         <p>
                                             Below you can see a video of the bossfight
                                         </p>
-                                        <iframe width="420" height="315" src="https://www.youtube.com/embed/N9oiMFIJnNk" allowfullscreen>
+                                        <iframe title="A video that shows the the player fighting the scorpion boss." width="420" height="315" src="https://www.youtube.com/embed/N9oiMFIJnNk" allowfullscreen>
                                 </iframe>
                                     </div>
                             </div>
