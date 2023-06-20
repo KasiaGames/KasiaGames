@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <title>kasia games</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link href ="../../baseStyle/base.css" rel="stylesheet">
 </head>
 <style>
@@ -25,22 +27,22 @@ body {
                         <div class="logo">
                         </div>
                         
-                        <a href="../../home/home.html">
+                        <a href="../home/home.html" aria-label="Home. Goes to the home page.">
                         <div class="home">
                         </div>
                         </a>
                         
-                        <a href="../../games/games.html">
+                        <a href="../games/games.html" aria-label="Games. Goes to the games page.">
                         <div class="games">
                         </div>
                         </a>
                             
-                        <a href="../../school/school.html">
+                        <a href="../school/school.html" aria-label="School. Goes to the school page.">
                         <div class="school">
                         </div>
                         </a>
                             
-                        <a href="../../other/other.html">
+                        <a href="../other/other.html" aria-label="Other. Goes to the other page.">
                         <div class="other">
                         </div>
                         </a>
@@ -85,57 +87,57 @@ body {
                                     With this level generation the values get put in 3d array. I wil explain it using a grid. The generation starts in the center of the grid.
                                 </p>
                                 <div class="imageBox">
-                                        <img src="images/levelGenerationExplenationImages/levelGenGrid.png" style="width: 100%">
+                                        <img alt="A grid with a green cube in the center." src="images/levelGenerationExplenationImages/levelGenGrid.png" style="width: 100%">
                                 </div>
                                 <p>
                                     Then it chooses a random direction and moves one square. The square it came from gets 4 random values that decide how it wil look.
                                 </p>
                                 <div class="imageBox">
-                                        <img src="images/levelGenerationExplenationImages/levelGenGrid1.png" style="width: 100%">
+                                        <img alt="The green cube moved one sqaure to the right and there is now a red cube with 4 numers inside. The red cube is placed at the place where the green cube was in the step before this one." src="images/levelGenerationExplenationImages/levelGenGrid1.png" style="width: 100%">
                                 </div>
                                 <p>
                                     This wil repeat multiple times. A integer decides how many times it wil repeat.
                                 </p>
                                 <div class="imageBox">
-                                        <img src="images/levelGenerationExplenationImages/levelGenGrid2.png" style="width: 100%">
+                                        <img alt="The green cube is at the top eft of the grid and there are 5 red cubes now." src="images/levelGenerationExplenationImages/levelGenGrid2.png" style="width: 100%">
                                 </div>
                                 <p>
                                     It cant generate a room on the sqaures at the edge of the grid. when its next to one of those sqaures it cant move to those sqaures. This is to make sure there arent any index out of range errors.
                                 </p>
                                 <div class="imageBox">
-                                        <img src="images/levelGenerationExplenationImages/levelGenGrid3.png" style="width: 100%">
+                                        <img alt="The image is the same as the one from a step before this one but the squares at the edge are yellow now." src="images/levelGenerationExplenationImages/levelGenGrid3.png" style="width: 100%">
                                 </div>
                                 <p>
                                     At the end the values of the first room get changed so its always the same.
                                 </p>
                                 <div class="imageBox">
-                                        <img src="images/levelGenerationExplenationImages/levelGenGrid4.png" style="width: 100%">
+                                        <img alt="The green cube is also red now and the first room is pink with the words start kamer (dutch for starting room) in it." src="images/levelGenerationExplenationImages/levelGenGrid4.png" style="width: 100%">
                                 </div> 
                                 <p>
                                     Then the interior of the rooms get generated. For the generation of the rooms 4 2d arays are used on for each of the 4 values that a room has. There is an aray for walls and floors, an array for floor traps, an array for wall traps and an array for enemies. The arrays use different values to decide what needs to be placed on that square. The arrays also communicate with eachother to make sure it doesnt place two things on the same square that cant be placed on the same square. For example it makes sure it doesnt place enemies in walls.
                                 </p>
                                 <div class="imageBox">
-                                        <img src="images/levelGenerationExplenationImages/levelGenGrid5.png" style="width: 100%">
+                                        <img alt="The rooms have walls and floors now. The walls are dark blue and the floor is light blue." src="images/levelGenerationExplenationImages/levelGenGrid5.png" style="width: 100%">
                                 </div>
                                 <div class="imageBox">
-                                        <img src="images/levelGenerationExplenationImages/levelGenGrid6.png" style="width: 100%">
+                                        <img alt="Some floor tiles are replaced with floor traps. The floor traps are pink." src="images/levelGenerationExplenationImages/levelGenGrid6.png" style="width: 100%">
                                 </div>
                                 <div class="imageBox">
-                                        <img src="images/levelGenerationExplenationImages/levelGenGrid7.png" style="width: 100%">
+                                        <img alt="Some walls are replaced with wall traps. The wall traps are green." src="images/levelGenerationExplenationImages/levelGenGrid7.png" style="width: 100%">
                                 </div>
                                 <div class="imageBox">
-                                        <img src="images/levelGenerationExplenationImages/levelGenGrid8.png" style="width: 100%">
+                                        <img alt="Enemies are placed on the floor. The enemies are yellow." src="images/levelGenerationExplenationImages/levelGenGrid8.png" style="width: 100%">
                                 </div>
                                 <p>
                                     After that each room checks the values of the rooms next to it. If those values are (0, 0, 0, 0) then its empty and the room will place a wall between the empty room and itself. If we didnt prevent the rooms from generating on the edge then we would get an index out of range error at this step.
                                 </p>
                                 <div class="imageBox">
-                                        <img src="images/levelGenerationExplenationImages/levelGenGrid9.png" style="width: 100%">
+                                        <img alt="Some floor tiles are replaced with walls to prevent players from walking of the map. The walls are red." src="images/levelGenerationExplenationImages/levelGenGrid9.png" style="width: 100%">
                                 </div>
                                 <p>
                                     Below you can see a video of the rooms getting generated.
                                 </p>
-                                <iframe width="420" height="315" src="https://www.youtube.com/embed/UqiVNuXWnYY" allowfullscreen>
+                                <iframe title="A video that shows the level generation." width="420" height="315" src="https://www.youtube.com/embed/UqiVNuXWnYY" allowfullscreen>
                                 </iframe>
                             </div>
                             </div>
