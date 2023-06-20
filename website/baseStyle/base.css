@@ -138,7 +138,7 @@ pre {
     }
 
   /* For landscape ipad layouts only */
-@media only screen and (device-width: 1024px) and (orientation:landscape) {
+@media only screen and (device-width: 1024px) {
 .imageBox {
     color: black;
     text-align: left;
@@ -147,8 +147,7 @@ pre {
     padding-right: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
-    width: auto;
-    max-width: 700px;
+    width: 370px;
     height: auto;
     image-resolution: snap;
     background-color: rgb(139,134,129);;
@@ -167,7 +166,6 @@ pre {
     }
         
     .contentBackgroundMidImage {
-        
         margin-right: 0;
         width: inherit;
         display: flex;
@@ -175,7 +173,6 @@ pre {
         image-rendering: pixelated;
         background-repeat: repeat-y;
         background: url(baseImage/backgroundImagesPc/textBackgroundMidImage.png);
-        -webkit- background-size: 70vh auto;
         background-size: 550px auto;
     }
         
@@ -188,6 +185,29 @@ pre {
         background-repeat: repeat-y;
         background: url(baseImage/backgroundImagesPc/textBackgroundBottomImage.png);
         background-size: 550px auto;
+    }  
+    
+    .linkTextBox {
+        color: rgb(139,134,129);
+        margin-right: 5vw;
+        margin-left: 15vw;
+        word-wrap: break-word;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 300px;
+        background-color: rgb(61,61,61);;
+    }
+    
+    .linkTextBox:hover {
+        color: black;
+        margin-right: 5vw;
+        margin-left: 15vw;
+        transition-duration: 0.3s;
+        word-wrap: break-word;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 300px;
+        background-color: rgb(139,134,129);;
     }
 }
 
@@ -227,7 +247,7 @@ pre {
         background-size: contain;
     }
     
-    @media (device-width: !1024px){
+    @media not all and (device-width: 1024px){
     .contentBackgroundTopImage {
         aspect-ratio: 16/9;
         margin-right: 0;
@@ -294,6 +314,7 @@ pre {
     background-color: transparent;
 }
 
+@media not all and (device-width: 1024px){
 .linkTextBox {
     color: rgb(139,134,129);
     margin-right: 5vw;
@@ -329,6 +350,7 @@ pre {
     height: auto;
     image-resolution: snap;
     background-color: rgb(139,134,129);;
+}
 }
 
 .imageBoxHalf {
