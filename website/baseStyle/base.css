@@ -128,9 +128,6 @@ pre {
 
 /*for landscape ipad layouts only*/
 @media only screen and (device-width: 1024px) {
-    img {
-        width: 350px;
-    }
     
     .textBox {
         color: rgb(179,174,169);
@@ -156,6 +153,11 @@ pre {
             height: auto;
             image-resolution: snap;
             background-color: rgb(139,134,129);;
+    }
+    
+    img {
+        width: 300px;
+        max-width: 350px; 
     }
     
     .backgroundTopImage {
