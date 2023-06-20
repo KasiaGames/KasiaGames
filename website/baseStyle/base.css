@@ -117,18 +117,6 @@ pre {
     background: url(baseImage/backgroundImagesMobile/textBackgroundBottomImage.png);
     background-size: contain;
 }
-    
-.textBox {
-    color: rgb(179,174,169);
-    margin-right: 0vw;
-    margin-left: auto;
-    word-wrap: break-word;
-    padding-left: 10px;
-    padding-right: 0px;
-    width: auto;
-    max-width: 75vw;
-    background-color: transparent;
-}
 
 .textBoxHalf {
         color: rgb(179,174,169);
@@ -140,19 +128,31 @@ pre {
 
 /*for landscape ipad layouts only*/
 @media only screen and (device-width: 1024px) {
-.imageBox {
-    color: black;
-    text-align: left;
-    margin-left: 10vw;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: 370px;
-    height: auto;
-    image-resolution: snap;
-    background-color: rgb(139,134,129);;
-}
+    .textBox {
+        color: rgb(179,174,169);
+        margin-right: 0vw;
+        margin-left: auto;
+        word-wrap: break-word;
+        padding-left: 10px;
+        padding-right: 0px;
+        width: 350px;
+        max-width: 75vw;
+        background-color: transparent;
+    }
+    
+    .imageBox {
+            color: black;
+            text-align: left;
+            margin-left: 10vw;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width: 350px;
+            height: auto;
+            image-resolution: snap;
+            background-color: rgb(139,134,129);;
+    }
     
     .backgroundTopImage {
         aspect-ratio: 16/9;
@@ -381,6 +381,17 @@ pre {
     height: auto;
     image-resolution: snap;
     background-color: rgb(139,134,129);;
+}
+.textBox {
+    color: rgb(179,174,169);
+    margin-right: 0vw;
+    margin-left: auto;
+    word-wrap: break-word;
+    padding-left: 10px;
+    padding-right: 0px;
+    width: auto;
+    max-width: 75vw;
+    background-color: transparent;
 }
 }
 
