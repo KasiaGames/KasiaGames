@@ -172,7 +172,7 @@ pre {
         min-height: 56.25vw;
         display: flex;
         flex-direction: column;
-        width: 100%;
+        width: 1024px;
         image-rendering: pixelated;
         background: url(baseImage/backgroundImagesPc/backgroundMidImage2.png), url(baseImage/backgroundImagesPc/backgroundMidImage.png);
         background-repeat: repeat-y;
@@ -202,7 +202,7 @@ pre {
         
     .contentBackgroundMidImage {
         margin-right: 0;
-        width: inherit;
+        width: 550px;
         display: flex;
         flex-direction: column;
         image-rendering: pixelated;
