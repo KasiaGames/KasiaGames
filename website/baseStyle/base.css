@@ -1,3 +1,4 @@
+/*for all devices*/
 a:link {
     color: black;
     text-decoration: none;
@@ -52,7 +53,7 @@ pre {
 }
 
 
-/*mobile only style*/
+/*for mobile only*/
 .backgroundTopImage {
     aspect-ratio: 1/1;
     margin-top: -1vw;
@@ -137,7 +138,7 @@ pre {
         background-color: transparent;
     }
 
-  /* For landscape ipad layouts only */
+/*for landscape ipad layouts only*/
 @media only screen and (device-width: 1024px) {
 .imageBox {
     color: black;
@@ -245,7 +246,7 @@ pre {
     }
 }
 
-/*pc only style*/
+/*for pc only*/
 @media (min-width: 70vh){
     @media not all and (device-width: 1024px){
             
@@ -341,14 +342,6 @@ pre {
     }
 }
 
-.waterContent {
-    margin-left: auto;
-    margin-right: 0;
-    width: 20%;
-    image-rendering: pixelated;
-    background-color: transparent;
-}
-
 @media not all and (device-width: 1024px){
 .linkTextBox {
     color: rgb(139,134,129);
@@ -388,6 +381,15 @@ pre {
 }
 }
 
+.waterContent {
+    margin-left: auto;
+    margin-right: 0;
+    width: 20%;
+    image-rendering: pixelated;
+    background-color: transparent;
+}
+
+/*for all devices*/
 .imageBoxHalf {
     color: black;
     text-align: left;
