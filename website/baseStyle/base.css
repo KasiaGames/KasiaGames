@@ -195,6 +195,7 @@ pre {
         image-rendering: pixelated;
         background-repeat: repeat-y;
         background: url(baseImage/backgroundImagesPc/textBackgroundMidImage.png);
+        -webkit- background-size: 70vh auto;
         background-size: 70vh auto;
     }
     .contentBackgroundBottomImage {
@@ -227,21 +228,6 @@ pre {
         background-color: transparent;
     }
 }
-
-/* For landscape ipad layouts only */
-@media only screen and (device-width: 1024px) and (orientation:landscape) {
-    .contentBackgroundMidImage {
-        margin-right: 0;
-        width: 70vh;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        flex-shrink: auto;
-        background: red;
-        background-size: contain, auto;
-    }
-}
-
 
 .waterContent {
     margin-left: auto;
