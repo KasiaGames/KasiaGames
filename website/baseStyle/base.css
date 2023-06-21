@@ -1,4 +1,7 @@
 /*for all devices*/
+html {
+  scroll-behavior: smooth;
+}
 a:link {
     color: black;
     text-decoration: none;
@@ -34,22 +37,6 @@ pre {
     flex-direction: row-reverse;
 }
 
-.contentBox {
-    margin-top: calc(-0.5625vw - 40vh);
-    margin-right: 0;
-    max-width: 100vh;
-    margin-left: auto;
-    display: flex;
-    flex-direction: column;
-    background-color: transparent;
-}
-.contentRowBox {
-    width: inherit;
-    display: flex;
-    padding-left: 10vw;
-    flex-direction: row-reverse;
-    background-color: transparent;
-}
 
 .imageBox {
     color: black;
@@ -136,6 +123,30 @@ pre {
         background: url(baseImage/backgroundImagesPc/textBackgroundBottomImage.png);
         background-size: contain;
     }
+    
+.contentBox {
+    margin-top: calc(-0.5625vw - 40vh);
+    margin-right: 0;
+    max-width: 100vh;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+}
+.contentRowBox {
+    width: inherit;
+    display: flex;
+    padding-left: 10vw;
+    flex-direction: row-reverse;
+    background-color: transparent;
+}
+.waterContent {
+    margin-left: auto;
+    margin-right: 0;
+    width: 20%;
+    image-rendering: pixelated;
+    background-color: transparent;
+}
     
 .textBox {
         color: rgb(179,174,169);
@@ -244,30 +255,47 @@ pre {
     background-size: contain;
 }
     
+.contentBox {
+    margin-top: calc(-0.5625vw - 40vh);
+    max-width: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+}
+.contentRowBox {
+    width: inherit;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: transparent;
+}
+.waterContent {
+    width: 18vw;
+    max-width: 16vh;
+    image-rendering: pixelated;
+    background-color: transparent;
+}
+    
 .textBox {
     color: rgb(179,174,169);
     margin: auto;
     word-wrap: break-word;
-    padding-left: 10vw;
-    padding-right: 0px;
     width: auto;
     max-width: 75vw;
     background-color: transparent;
 }
 .textBoxHalf {
-        color: rgb(179,174,169);
-        word-wrap: break-word;
-        width: auto;
-        max-width: 38vw;
-        background-color: transparent;
+    color: rgb(179,174,169);
+    word-wrap: break-word;
+    width: auto;
+    max-width: 38vw;
+    background-color: transparent;
 }
     
 .linkTextBox {
     color: rgb(139,134,129);
     margin: auto;
     word-wrap: break-word;
-    padding-left: 10vw;
-    padding-right: 0px;
     width: auto;
     max-width: 75vw;
     background-color: rgb(61,61,61);;
@@ -277,8 +305,6 @@ pre {
     margin: auto;
     transition-duration: 0.3s;
     word-wrap: break-word;
-    padding-left: 10vw;
-    padding-right: 0px;
     width: auto;
     max-width: 75vw;
     background-color: rgb(139,134,129);;
@@ -286,19 +312,10 @@ pre {
 }
 
 /*for all devices*/
-
-.waterContent {
-    margin-left: auto;
-    margin-right: 0;
-    width: 20%;
-    image-rendering: pixelated;
-    background-color: transparent;
-}
-
 .imageBoxHalf {
     color: black;
     text-align: left;
-    margin-left: 0vw;
+    margin-bottom: auto;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 10px;
