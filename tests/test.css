@@ -1,9 +1,17 @@
+body {
+margin: 0%;
+}
+
+h1 {
+    font-size: x-small;
+}
+
 /*alows you to place two half elements next to each other*/
 .contentRowBox {
-    width: inherit;
     display: flex;
-    padding-left: 10vw;
     flex-direction: row-reverse;
+    width: inherit;
+    padding: 2%;
     background-color: transparent;
 }
 
@@ -13,9 +21,10 @@
     display: flex;
     flex-direction: column;
 
-    color: rgb(179,174,169);
+    color: gainsboro;
     word-wrap: break-word;
     width: 50%;
+    padding: 2%;
     background-color: transparent;
 }
 
