@@ -1,3 +1,4 @@
+/*alows you to place two half elements next to each other*/
 .contentRowBox {
     width: inherit;
     display: flex;
@@ -6,16 +7,19 @@
     background-color: transparent;
 }
 
+/*its a text box but now half the size alows you to put in text*/
 .textBoxHalf {
+    /*decorationFiller doesnt work without flex*/
     display: flex;
     flex-direction: column;
+
     color: rgb(179,174,169);
     word-wrap: break-word;
     width: 50%;
-    max-width: 50%;
     background-color: transparent;
 }
 
+/*decorationFiller fills the remaining space of a parent element*/
 .decorationFiller {
 width: 100%;
 height: auto;
