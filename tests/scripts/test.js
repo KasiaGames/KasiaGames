@@ -1,1 +1,1 @@
-document.body.innerHTML = "CHEESE";
+document.body.innerHTML = "I like CHEESE!";
