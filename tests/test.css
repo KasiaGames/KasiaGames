@@ -1,5 +1,22 @@
-.testBox {
-    background-color: brown;
-    width: 50vw;
-    height: 50vh;
+.contentRowBox {
+    width: inherit;
+    display: flex;
+    padding-left: 10vw;
+    flex-direction: row-reverse;
+    background-color: transparent;
+}
+
+.textBoxHalf {
+    display: flex;
+    flex-direction: column;
+    color: rgb(179,174,169);
+    word-wrap: break-word;
+    width: 50%;
+    max-width: 50%;
+    background-color: transparent;
+}
+
+.decorationFiller {
+width: 100%;
+height: 100px;
 }
