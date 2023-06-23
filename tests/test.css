@@ -44,5 +44,6 @@ h1 {
 .decorationFiller {
 width: 100%;
 height: auto;
+background-size: cover;
 flex: 1;
 }

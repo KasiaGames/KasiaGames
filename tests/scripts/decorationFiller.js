@@ -23,10 +23,12 @@ for (var decorationFillers = 0; decorationFillers < decorationFiller.length; dec
     //wide decorationFillers will become green
     //but decorationFillers that are too wide or tall will become green
     if (height > width && acceptedDiverence*height < width){
-    decorationFiller[decorationFillers].style.backgroundColor = "red";
+    decorationFiller[decorationFillers].style.background = "url(images/tall.png)";
+    decorationFiller[decorationFillers].style.backgroundSize = "cover";
     }
     else if (height < width && height > acceptedDiverence*width){
-    decorationFiller[decorationFillers].style.backgroundColor = "green";
+    decorationFiller[decorationFillers].style.background = "url(images/wide.png)";
+    decorationFiller[decorationFillers].style.backgroundSize = "cover";
     }
     else {
     decorationFiller[decorationFillers].style.backgroundColor = "blue";
