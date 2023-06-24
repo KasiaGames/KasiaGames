@@ -4,6 +4,7 @@
 <title>kasia games</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href ="../../../baseStyle/base.css" rel="stylesheet">
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 </head>
 <style>
 
@@ -120,10 +121,15 @@ body {
                                 <div class="textBox">
                                 <div class="mc-status" data-mc-server="[mc.kasia.games]"></div>
                                 </div>
-                                <div class="imageBox"><iframe scr="http://mc.kasia.games:8123/" width="100%" height="1200" title="minecraft map">
+                                <a href="http://mc.kasia.games:8123/" aria-label="Goes to the map of the Minecraft server.">
+                                    <div class="linkTextBox">
+                                        <h1>Minecraft server map</h1>
+                                    </div>
+                                </a>
 
-                                </iframe></div>
-                                
+                                <div class="imageBox">
+                                    <iframe scr="http://mc.kasia.games:8123/"></iframe>
+                                </div>
                                 <div class="textBox">
                                     <!-- add text here -->
                     
