@@ -169,8 +169,7 @@ pre {
         flex-direction: column;
         color: rgb(179,174,169);
         word-wrap: break-word;
-        width: auto;
-        max-width: 50%;
+        width: 50%;
         background-color: transparent;
     }
     
@@ -299,7 +298,7 @@ pre {
     flex-direction: column;
     color: rgb(179,174,169);
     word-wrap: break-word;
-    width: auto;
+    width: 50%;
     max-width: 38vw;
     background-color: transparent;
 }
