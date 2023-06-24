@@ -15,42 +15,42 @@ window.addEventListener('resize', function () {
     window.location.reload(); 
 });
 
-window.onload = function() {
-//loops trough the list
-for (var decorationFillers = 0; decorationFillers < decorationFiller.length; decorationFillers++){
+function decorationFil(folderDept){
+    //loops trough the list
+    for (var decorationFillers = 0; decorationFillers < decorationFiller.length; decorationFillers++){
 
-    //the width and heigth of a decorationFiller
-    var width = decorationFiller[decorationFillers].offsetWidth;
-    var height = decorationFiller[decorationFillers].offsetHeight;
+        //the width and heigth of a decorationFiller
+        var width = decorationFiller[decorationFillers].offsetWidth;
+        var height = decorationFiller[decorationFillers].offsetHeight;
+        
+        //decides the color of a decorationFiller
+        //extra tall
+        if (maxAcceptedDiverence * height > width){
+        decorationFiller[decorationFillers].style.background = "url(" + folderDept + "baseStyle/baseImage/backgroundDecorationImages/extraTall" + (Math.floor(Math.random() * backgrounds + 1) + ".png)");
+        decorationFiller[decorationFillers].style.backgroundRepeat="no-repeat";
+        decorationFiller[decorationFillers].style.backgroundSize = "100%";
+        }
+        //tall
+        else if (AcceptedDiverence * height > width && width > maxAcceptedDiverence * height){
+        decorationFiller[decorationFillers].style.background = "url(" + folderDept + "baseStyle/baseImage/backgroundDecorationImages/tall" + (Math.floor(Math.random() * backgrounds + 1) + ".png)");
+        decorationFiller[decorationFillers].style.backgroundRepeat="no-repeat";
+        decorationFiller[decorationFillers].style.backgroundSize = "100%";
+        }
+        //short
+        else if (height > minAcceptedDiverence * width && width > height){
+        decorationFiller[decorationFillers].style.background = "url(" + folderDept + "baseStyle/baseImage/backgroundDecorationImages/short" + (Math.floor(Math.random() * backgrounds + 1) + ".png)");
+        decorationFiller[decorationFillers].style.backgroundRepeat="no-repeat";
+        decorationFiller[decorationFillers].style.backgroundSize = "100%";
+        }
+        //medium
+        else if (height > AcceptedDiverence * width && width > AcceptedDiverence * height) {
+        decorationFiller[decorationFillers].style.background = "url(" + folderDept + "baseStyle/baseImage/backgroundDecorationImages/medium" + (Math.floor(Math.random() * backgrounds + 1) + ".png)");
+        decorationFiller[decorationFillers].style.backgroundRepeat="no-repeat";
+        decorationFiller[decorationFillers].style.backgroundSize = "100%";
+        }
+        else {
     
-    //decides the color of a decorationFiller
-    //extra tall
-    if (maxAcceptedDiverence * height > width){
-    decorationFiller[decorationFillers].style.background = "url(../baseStyle/baseImage/backgroundDecorationImages/extraTall" + (Math.floor(Math.random() * backgrounds + 1) + ".png)");
-    decorationFiller[decorationFillers].style.backgroundRepeat="no-repeat";
-    decorationFiller[decorationFillers].style.backgroundSize = "100%";
+        }
+    
     }
-    //tall
-    else if (AcceptedDiverence * height > width && width > maxAcceptedDiverence * height){
-    decorationFiller[decorationFillers].style.background = "url(../baseStyle/baseImage/backgroundDecorationImages/tall" + (Math.floor(Math.random() * backgrounds + 1) + ".png)");
-    decorationFiller[decorationFillers].style.backgroundRepeat="no-repeat";
-    decorationFiller[decorationFillers].style.backgroundSize = "100%";
-    }
-    //short
-    else if (height > minAcceptedDiverence * width && width > height){
-    decorationFiller[decorationFillers].style.background = "url(../baseStyle/baseImage/backgroundDecorationImages/short" + (Math.floor(Math.random() * backgrounds + 1) + ".png)");
-    decorationFiller[decorationFillers].style.backgroundRepeat="no-repeat";
-    decorationFiller[decorationFillers].style.backgroundSize = "100%";
-    }
-    //medium
-    else if (height > AcceptedDiverence * width && width > AcceptedDiverence * height) {
-    decorationFiller[decorationFillers].style.background = "url(../baseStyle/baseImage/backgroundDecorationImages/medium" + (Math.floor(Math.random() * backgrounds + 1) + ".png)");
-    decorationFiller[decorationFillers].style.backgroundRepeat="no-repeat";
-    decorationFiller[decorationFillers].style.backgroundSize = "100%";
-    }
-    else {
-
-    }
-
 }
-};
