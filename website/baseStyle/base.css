@@ -354,6 +354,13 @@ pre {
     background-size: contain;
     
 }
+.sideFiller {
+    display: flex;
+    top: 0px;
+    height: 100vh;
+    width: 18vw;
+    max-width: 16vh;
+}
 .iconBox {
     display: flex;
     flex-direction: column;
