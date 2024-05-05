@@ -1,7 +1,7 @@
 Hello i Like cheese.
 <picture>
- <source media="(prefers-color-scheme: dark)" srcset="http://www.kasia.games/website/baseStyle/baseImage/baseIcon/logo.png">
- <source media="(prefers-color-scheme: light)" srcset="http://www.kasia.games/website/baseStyle/baseImage/baseIcon/logo.png">
+ <source media="(prefers-color-scheme: dark)" srcset="http://www.kasia.games/website/imagesNotUsedInWebsite/logoBar.png">
+ <source media="(prefers-color-scheme: light)" srcset="http://www.kasia.games/website/imagesNotUsedInWebsite/logoBar.png">
  <img alt="YOUR-ALT-TEXT" src="http://www.kasia.games/website/baseStyle/baseImage/baseIcon/logo.png">
 </picture>
 
